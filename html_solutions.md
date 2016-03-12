@@ -34,6 +34,10 @@
   - http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
 * Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions?
   - Putting the CSS in the head ensures that the styling is download and parsed before the body of the document so it will be applied before anything is rendered. Otherwise, there might be a gap between when the html is rendered and when the styling is applied
-  - 
+  - Putting the JS script right before the end of the body ensures that the JavaScript does not keep the page from rendering and that any elements referenced in the JS (ie. in jQuery) have already been created when the script executes. 
+  
 * What is progressive rendering?
+  - An image is rendered top-down as the bits are received. This is how an image will traditionally be rendered if you don't make any changes to it (ie.interlacing).
+  
 * Have you used different HTML templating languages before?
+  - Underscore
