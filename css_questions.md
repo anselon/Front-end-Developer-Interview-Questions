@@ -20,10 +20,22 @@
       - other cases: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
   
 * Describe BFC(Block Formatting Context) and how it works.
+ - the region in which the layout of block boxes occurs ans in which floats interact with eachother
+ - floats only effect the layout of their own BFC.
+ - https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context
   
 * What are the various clearing techniques and which is appropriate for what context?
+ - add an element to the bottom of the container or floats with .clear{ clear:both}
+ - change the container to have overflow:hidden (froces container to take on height of child (floated) divs
+ - change .container to have min-height:conatain-floats;
+ - add class .clearfix to .container with css .clearfix:after { display:table;content:"";clear:both}
+    - this creates another element like the first solution
+    
 * Explain CSS sprites, and how you would implement them on a page or site.
+  - sprites are concatenated images used to reduce the bandwidth required to load a page because all the images are received with one request instead of in separate requests. 
 * What are your favourite image replacement techniques and which do you use when?
+- SVG 
+- 
 * How would you approach fixing browser-specific styling issues?
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
